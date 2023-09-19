@@ -1,0 +1,246 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom scrollbar styles - commented out for now */
+
+/* Body styles */
+body {
+  /* /* height: 100vh; */
+  width: 100vw; 
+  background-color: rgba(33, 98, 124, 0.636);
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#search {
+  display: block;
+  width: 350px;
+  height: 35px;
+  border: 0;
+  outline: 0;
+  background-color: #09507c;
+  border-radius: 17px;
+  color: white;
+  font-size: 18px;
+  padding: 13px 24px;
+}
+#search2 {
+  display: none;
+  width: 350px;
+  height: 35px;
+  border: 0;
+  outline: 0;
+ margin: 10px;
+  border-radius: 17px;
+
+  /* color: white; */
+  font-size: 18px;
+  padding: 13px 24px;
+}
+
+.burger {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 5%;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.burger input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+/* Hamburger styles */
+
+.burger span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background-color: #09507c;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+/* Transform all the slices of hamburger into a crossmark */
+
+.burger input:checked ~ span {
+  opacity: 1;
+  transform: rotate(-45deg) translate(-8px, -5px);
+  background-color: #09507c;
+}
+
+/* Hide the middle one */
+
+.burger input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/* Last one should go the other direction */
+
+.burger input:checked ~ span:nth-last-child(2) {
+  transform: rotate(50deg) translate(-9px, 0px);
+}
+
+/* List styles */
+.list ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  font-size: 20px;
+}
+
+.list a {
+  text-decoration: none;
+  color: #09507c;
+  font-family: "Abhaya Libre", serif;
+  font-weight: 800;
+  font-style: normal;
+  line-height: normal;
+}
+
+/* Product styles */
+#product1,
+#product2 {
+  display: flex;
+  margin: 30px;
+  /* height: 235px; */
+  gap: 50px;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+
+#product2 {
+  margin-top: 20px;
+}
+
+#book {
+  height: 350px;
+  width: 360px;
+  background-color: rgba(255, 253, 245, 0.7);
+  margin-left: 25px;
+  border-radius: 15px;
+}
+
+#book img {
+  height: 200px;
+  width: 150px;
+  margin-left: 20%;
+  margin-top: 5%;
+}
+
+h4 {
+  color: #09507c;
+  font-weight: 600;
+  font-family: "Abhaya Libre", serif;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+#cart {
+
+
+  background-color: #09507c;
+  color: white;
+  border: 0;
+  height: 30px;
+  width: 140px;
+  margin-left: 35px;
+  border-radius: 18px;
+  cursor: pointer;
+  font-family: "Abhaya Libre", serif;
+  text-align: center;
+}
+
+footer {
+  background-color: #09507c;
+  height: 120px;
+
+  margin-top: 10%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: "Abhaya Libre", serif;
+  font-style: normal;
+  font-weight: 500;
+  color: white;
+}
+
+
+@media (max-width: 1000px) {
+  /* responsive styles here */
+
+  .list ul {
+    font-size: 18px;
+  }
+  #product1 {
+    flex-direction: column;
+    align-items: center;
+  }
+  #product2 {
+    flex-direction: column;
+    align-items: center;
+  }
+  #book {
+    margin-left: 0;
+   
+  }
+  .burger{
+    display: block;
+  }
+  #search{
+    display: none;
+  }
+  #search2{
+    display: block;
+    background-color: white;
+
+  }
+  nav{
+    flex-direction: column;
+  }
+  #cart{
+    margin-left: 80px;
+  }
+  h4{
+    margin-right: 58px;
+  }
+  .a-class{
+    /* opacity: 0; */
+  }
+}

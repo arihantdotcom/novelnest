@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgba(33, 98, 124, 0.636);
+  height: 80vh;
+  width: 100vw;
+}
+h1 {
+  color: white;
+  text-align: center;
+}
+.login {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+.loginitem {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;/ */
+  align-items: center;
+  height: 500px;
+  width: 400px;
+  background-color: #09507c;
+  border-radius: 28px;
+
+  gap: 30px;
+}
+input {
+  margin-top: 20%;
+  background-color: transparent;
+  color: white;
+}
+
+#username {
+  height: 40px;
+  border: 0;
+  border-bottom: 2px solid white;
+  outline: 0;
+  font-size: 17px;
+}
+#password {
+  height: 40px;
+  border: 0;
+  border-bottom: 2px solid white;
+  outline: 0;
+  font-size: 17px;
+}
+#submit {
+  height: 40px;
+  width: 100px;
+  border-radius: 19px;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+.nav {
+  position: sticky;
+  top: 0; /* Sticky at the top of the viewport */
+  z-index: 100;
+}
+nav {
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#icon {
+  background-color: #09507c;
+  /* border-radius: 17px; */
+  /* width: 25px; */
+  margin-left: -30px;
+}
+.list ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  font-size: 20px;
+}
+.list a {
+  text-decoration: none;
+  color: #09507c;
+  font-family: "Abhaya Libre", serif;
+  font-weight: 800;
+  font-style: normal;
+  line-height: normal;
+}
